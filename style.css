@@ -1,0 +1,144 @@
+:root {
+    --ff-sans: 'Poppins', sans-serif;
+
+    --fw-light: 200;
+    --fw-normal: 400;
+    --fw-bold: 600;
+
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.625rem;
+    --fs-900: 2.3rem;
+
+    --light-grey: hsl(212, 6%, 44%);
+    --dark-grey: hsl(234, 12%, 34%);
+    --white:hsl(0, 0%, 100%);
+    --clr-red: hsl(0, 78%, 62%);
+    --clr-cyan: hsl(180, 62%, 55%);
+    --clr-orange: hsl(34, 97%, 64%);
+    --clr-blue: hsl(212, 86%, 64%);
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+    height: 100%;
+}
+
+html {
+    font-family: var(--ff-sans);
+    font-size: var(--fw-normal);
+    line-height: 1.7;
+    color: var(--light-grey);
+
+}
+
+h1 {
+    font-weight: var(--fw-light);
+    font-size: var(--fs-900);
+    
+}
+
+h1 span {
+    font-weight: var(--fw-bold);
+}
+
+header p {
+    font-size: var(--fs-400);
+    font-weight: 600;
+}
+
+
+h1,
+h2,
+h3 {
+    color: var(--dark-grey);
+    line-height: 1.55;
+}
+
+.wrapper {
+    padding-inline: 2rem;
+    margin-inline: auto;
+    max-width: 1280px;
+}
+
+.wrapper--narrrow {
+    width: 550px;
+}
+
+header {
+    text-align: center;
+    margin-block: 5rem;
+}
+
+.layout-grid {
+    --gap: 1.5rem;
+    display: grid;
+    gap: var(--gap);
+    min-height: 800px;
+}
+
+.layout-grid > * {
+    flex: 1;
+}
+
+@media (min-width: 895px) {
+    .layout-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0 2rem;
+    }
+}
+
+.col {
+    display: grid;
+    gap: var(--gap);
+    align-content: center;
+}
+
+.card-title {
+    font-size: var(--fs-600);
+}
+
+.card {
+    --br: 0.325rem ;
+    border-top: var(--br) solid ;
+    border-radius: 0.3rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 1rem -0.5rem rgb(194, 191, 191);
+}
+
+.card, h2 {
+    line-height: 0.3;
+}
+
+.card, p {
+   line-height: 1.5;
+}
+
+img {
+    margin-top: 2rem;
+    float: right;
+}
+
+.border-cyan {
+    border-color: var(--clr-cyan);
+}
+
+.border-red {
+    border-color: var(--clr-red);
+}
+
+.border-orange {
+    border-color: var(--clr-orange);
+}
+
+.border-blue {
+    border-color: var(--clr-blue);
+}
+
